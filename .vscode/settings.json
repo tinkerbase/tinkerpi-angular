@@ -1,0 +1,5 @@
+{
+    "git.ignoreLimitWarning": true,
+    "appService.defaultWebAppToDeploy": "/subscriptions/16489a8a-9ebf-4221-b6f0-f1aea1b4bc00/resourceGroups/LoLaResourceGroup1/providers/Microsoft.Web/sites/TinkerPiDev",
+    "appService.deploySubpath": ""
+}

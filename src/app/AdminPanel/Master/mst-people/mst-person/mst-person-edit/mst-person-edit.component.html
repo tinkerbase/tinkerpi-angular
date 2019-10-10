@@ -1,0 +1,23 @@
+<mat-card>
+   <h4> Edit Profile Information</h4>
+   <div fxLayout="row wrap" class="col-gap">
+      <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="50" fxFlex.lg="50" fxFlex.xl="50">
+         <form [formGroup] = "info">
+            <div class="example-container">
+               <mat-form-field class="w-100 mb-3">
+                  <input matInput placeholder="First Name" formControlName="first_name">
+                  <mat-error *ngIf="info.get('first_name').hasError('required') && info.get('first_name').touched">This field should not be empty.</mat-error>
+               </mat-form-field>
+               <mat-form-field class="w-100 mb-3">
+                  <input matInput placeholder="Last Name" formControlName="last_name">
+                  <mat-error *ngIf="info.get('last_name').hasError('required') && info.get('last_name').touched">This field should not be empty.</mat-error>
+               </mat-form-field>
+               <button mat-raised-button color="accent" (click)="submitProfileInfo()">Save</button>
+            </div>
+           <!-- example-container -->
+         </form>
+      </div>
+      <div fxFlex.xs="100" fxFlex.sm="100" fxFlex.md="50" fxFlex.lg="50" fxFlex.xl="50" class="edit-profile" style="background-image: url(assets/images/user-edit.png)">
+      </div>
+   </div>
+</mat-card>
