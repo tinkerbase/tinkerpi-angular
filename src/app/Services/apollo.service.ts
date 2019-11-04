@@ -13,8 +13,8 @@ export class GraphQLService {
 
   constructor(private apollo: Apollo, httpLink: HttpLink) {
     apollo.create({
-      //link: httpLink.create({ uri: 'http://localhost:5001/graphql' }),
-      link: httpLink.create({ uri: 'https://tinkerpiapi.azurewebsites.net:5001/graphql' }),
+      link: httpLink.create({ uri: 'http://localhost:5001/graphql' }),
+      //link: httpLink.create({ uri: 'https://tinkerpiapi.azurewebsites.net:5001/graphql' }),
       cache: new InMemoryCache()
     });
   }

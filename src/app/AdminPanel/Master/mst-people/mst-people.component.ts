@@ -12,8 +12,9 @@ const QUERY = gql`
 {
   mstPeopleList
   {
-    firstName
-    lastName
+    name
+    emailAddress
+    phoneNumber
   }
 }
 `;
@@ -35,7 +36,7 @@ export class mstPeopleComponent implements OnInit {
 
    dataSource = new MatTableDataSource<any>(this.mstPeopleList);
 
-   displayedColumns: string[] = ['firstName', 'lastName', 'action'];
+   displayedColumns: string[] = ['name', 'emailAddress', 'phoneNumber', 'action'];
 
    constructor(public service: AdminPanelServiceService, public mservice: MasterService, private router : Router, private graphql: Apollo ) { }
 

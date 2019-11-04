@@ -3,9 +3,9 @@ import {ApolloModule, APOLLO_OPTIONS} from 'apollo-angular';
 import {HttpLinkModule, HttpLink} from 'apollo-angular-link-http';
 import {InMemoryCache} from 'apollo-cache-inmemory';
 
-// const uri = 'http://localhost:5001/graphql';
+const uri = 'http://localhost:5001/graphql';
 
-const uri = 'http://tinkerpiapi.azurewebsites.net/graphql'
+//const uri = 'http://tinkerpiapi.azurewebsites.net/graphql'
 export function createApollo(httpLink: HttpLink) {
   return {
     link: httpLink.create({uri}),

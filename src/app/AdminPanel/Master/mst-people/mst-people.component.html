@@ -17,13 +17,17 @@
       <mat-card>
          <div class="table-responsive-x">
             <table mat-table [dataSource]="dataSource" class="w-100 table-scroll-wrap">
-               <ng-container matColumnDef="firstName">
-                  <th class="px-3 text-nowrap" mat-header-cell *matHeaderCellDef> First Name </th>
-                  <td class="px-3 text-nowrap" mat-cell *matCellDef="let element"> {{element.firstName}} </td>
+               <ng-container matColumnDef="name">
+                  <th class="px-3 text-nowrap" mat-header-cell *matHeaderCellDef> Name </th>
+                  <td class="px-3 text-nowrap" mat-cell *matCellDef="let element"> {{element.name}} </td>
                </ng-container>
-               <ng-container matColumnDef="lastName">
-                  <th class="px-3 text-nowrap" mat-header-cell *matHeaderCellDef> Last Name </th>
-                  <td class="px-3 text-nowrap" mat-cell *matCellDef="let element"> <a href="javascript:void(0)" (click) ="onEditPerson()"> {{element.lastName}}</a> </td>
+               <ng-container matColumnDef="emailAddress">
+                  <th class="px-3 text-nowrap" mat-header-cell *matHeaderCellDef> E-Mail Address </th>
+                  <td class="px-3 text-nowrap" mat-cell *matCellDef="let element"> <a href="javascript:void(0)" (click) ="onEditPerson()"> {{element.emailAddress}}</a> </td>
+               </ng-container>
+               <ng-container matColumnDef="phoneNumber">
+                  <th class="px-3 text-nowrap" mat-header-cell *matHeaderCellDef> Phone Number </th>
+                  <td class="px-3 text-nowrap" mat-cell *matCellDef="let element"> <a href="javascript:void(0)" (click) ="onEditPerson()"> {{element.phoneNumber}}</a> </td>
                </ng-container>
                <ng-container matColumnDef="action">
                   <th class="px-3 text-nowrap" mat-header-cell *matHeaderCellDef> Action </th>
